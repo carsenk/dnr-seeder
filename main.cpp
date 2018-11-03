@@ -400,14 +400,18 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"dnsseed.hashbag.cc", "seed.denarius.host", "seed.denarius.io", "seed.denariusexplorer.org"};
+static const string mainnet_seeds[] = {"dnsseed.hashbag.cc", "seed.denarius.host",  ""};
 static const string testnet_seeds[] = {"testnet-dnsseed.hashbag.cc", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
     db.Add(CService("uefhefkuzrzfz6mz.onion", 33339), true);
-    db.Add(CService("103.43.118.78", 33339), true);
+    db.Add(CService("104.223.33.197", 33339), true);
+    db.Add(CService("108.170.1.134", 33339), true);
+    db.Add(CService("110.232.118.107", 33339), true);
+    db.Add(CService("115.79.5.135", 33339), true);
+    db.Add(CService("123.136.115.147", 33339), true);
     db.Add(CService("185.144.156.120", 33339), true);
     db.Add(CService("107.6.140.198", 9999), true);
     db.Add(CService("45.76.228.136", 9999), true);
